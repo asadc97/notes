@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>HTML Best Practices</title>
+    <link href="css/base.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <h1>HTML Best Practices</h1>
+    </header>
+
+    <main>
+      <section>
+        <h2>Develop good habits</h2>
+
+        <p>There is a preferred method of formatting your code.</p>
+        <p>It makes life easier for yourself and others who must decipher it later.</p>
+        <p>Developing good habits when you begin coding can help you avoid problems and bugs, both now and in the long-term when you tackle more complex challenges.</p>   
+      </section>
+
+
+      <section>
+        <h2>Use a proper <code>DOCTYPE</code></h2>
+
+        <p>A <code>DOCTYPE</code> tells a web browser which version of HTML you are using.</p>
+        <p>We will be using the <code>DOCTYPE</code> indicates our code is written in HTML5.</p>
+        <p>When you do not use a <code>DOCTYPE</code>, the browser enters what is called <em>quirks mode</em>, which can affect forward/backward compatibility.</p>
+        <p><strong>This is the <code>DOCTYPE</code> for HTML5:</strong></p>
+        <p><code>&lt;!DOCTYPE html&gt;</code></p>
+      </section>
+
+
+      <section>
+        <h2>Declare a character set</h2>
+
+        <p>A <em>character set</em> tells a web browser how our letters, numbers, special characters should be encoded.</p>
+        <p>There are many character sets beyond the ASCII standard we discussed when talking about text editors.</p>
+        <p>Different character sets include many types of glyphs and foreign characters.</p>
+        <p>We will use <code>UTF-8</code> since it includes more than 1 million characters.</p>
+        <p><strong>This is the tag we use to include our character set:</strong></p>
+        <p><code>&lt;meta charset="UTF-8" /&gt;</code></p>
+      </section>
+
+
+      <section>
+        <h2>Close your tags</h2>
+
+        <p><strong>Good:</strong> <code>&lt;p&gt;</code>Text<code>&lt;/p&gt;</code></p>
+        <p><strong>Bad:</strong> <code>&lt;p&gt;</code>Text</p>
+
+        <p>There are a few exceptions which are called self-closing tags. These include:</p>
+
+        <ul>
+          <li><code>&lt;link /&gt;</code></li>
+          <li><code>&lt;meta /&gt;</code></li>
+          <li><code>&lt;img /&gt;</code></li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Write code in lowercase</h2>
+
+        <p>HTML is not case sensitive, but...</p>
+        <p>Writing elements, attributes and values in lowercase is a accepted standard practice in front-end design. It ensures backward compatibility with XHTML (the version of HTML we used before HTML5).</p>
+        <p>It is also helpful to when trying to discern code from text.</p>
+        <p><code>&lt;p class="intro"&gt;This is a sentence.&lt;/p&gt;</code></p>
+        <p><small>Exception: it is not necessary to use lowercase for <code>alt</code> or <code>title</code> values.</small></p>
+      </section>
+
+
+      <section>
+        <h2>Quote attribute values</h2>
+
+        <p>Using quotes around attribute values adds visual cues for easier-to-read code.</p>
+        <p>Quotes also help avoid bugs when working with CSS and Javascript.</p>
+        <p><code>&lt;img alt="Sebastian the Ibis" class="photo" src="photo.jpg" /&gt;</code></p>
+      </section>
+
+
+      <section>
+        <h2>Attributes should have values</h2>
+
+        <p>Most attributes require a value. Some do not.</p>
+        <p>Adding a value, even when not required, will help when working with CSS and Javascript.</p>
+        <p><code>&lt;audio controls="controls"&gt;&lt;/audio&gt;</code></p>
+      </section>
+
+      <section>
+        <h2>Comment your code</h2>
+
+        <p><code>&lt;!-- This is a comment --&gt;</code></p>
+        <p>Adding comments to your code helps you understand why you did what you did.</p>
+        <p>They also enable whomever inherits your code to understand:
+        <ul>
+          <li>the logic behind the program</li>
+          <li>what each part of the program is supposed to do</li>
+          <li>how it is supposed to work</li>
+        </ul>
+        <p>Comments and proper style will aid you in debugging and program maintenance.</p>
+      </section>
+
+
+      <section>
+        <h2>Do not use double dashes in comments</h2>
+
+        <p><code>&lt;!-- If you must use double dashes in a comment, use two single dashes separated by a space - - like so. --&gt;</code></p>
+        <p>Because double dashes are used at the beginning and end of a comment, using them within may invalidate your code or create a bug.</p>
+      </section>
+
+
+      <section>
+        <h2>Encode HTML entities</h2>
+
+        <p><em>HTML entities</em> are special characters. In code, they begin with an ampersand (&amp;) and end with a semicolon (;).</p>
+        <p>These may be glyphs or characters used in foreign languages.</p>
+        <p>Many characters have an <em>entity name</em> and <em>entity number</em>. Most modern browsers will recognize entity names. If the symbol appears broken, however, try using the entity number instead.</p>
+        <p><a href="http://character-code.com/">Character Code</a> offers an <em>awesome</em> cheat sheet for HTML entities.</p>
+        <p>The <a href="http://dev.w3.org/html5/html-author/charref">W3C</a> provides a pretty comprehensive reference, too.</p>
+      </section>
+
+
+      <section>
+        <h2>Example: HTML Entities</h2>
+
+        <ul>
+          <li>Dagger: &Dagger;</li>
+          <li>Spade: &spades;</li>
+          <li>Pound Sterling: &pound;</li>
+          <li>Euro: &euro;</li>
+          <li>Copyright: &copy;</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Indent code</h2>
+
+        <p>HTML is not sensitive to white space.</p>
+        <p>The use of white space aids readability. It should be used to display the hierarchy of the code.</p>
+        <p>Indent code by two spaces for each level. This makes it easier to match block-level opening and closing tags, making your code easier to read and maintain.</p>
+        <p>Most code editors can be set to adjust the indent spacing to utilize the <code>tab</code> key. Make sure it is set to indent with two spaces and not a tab (which is five spaces).</p>
+        <p>The amount of spacing you use between lines is a matter of preference. Find a pattern which suits you and remain consistent.</p>
+      </section>
+
+
+      <section>
+        <h2>Filenames should <em>always</em> be lowercase</h2>
+
+        <p>The web servers <em>are</em> often case-sensitive.</p>
+        <p>While your computer may not see the difference between <code>img.jpg</code> and <code>img.JPG</code>, a web server sees these as different files.</p>
+
+        <p><code>&lt;img src="images/miami-beach.jpg" /&gt;</code></p>
+      </section>
+
+
+      <footer>
+        <a href="html-anaotmy.html">Next: HTML Anatomy &raquo;</a>
+      </footer>
+    </main>
+  </body>
+</html>

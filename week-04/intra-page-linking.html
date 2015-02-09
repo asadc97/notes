@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Intra-page linking</title>
+    <link href="../css/base.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Intra-page linking</h1>
+    </header>
+
+    <main>
+      <section>
+        <h2>How do I link to a specific part of a page?</h2>
+
+        <p>You need two components:</p>
+
+        <ul>
+          <li>a link</li>
+          <li>a target for the link</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Link</h2>
+
+        <p>It's just like any other link, except we refer to an "id" value within our page.</p>
+
+        <p><code>&lt;a href="#cats"&gt;cats&lt;/a&gt;</code></p>
+
+        <p>The value should:
+        <ul>
+          <li>begin with a hashtag (#)</li>
+          <li>be lowercase</li>
+          <li>not include spaces</li>
+          <li>be unique</li>
+        </ul>
+
+      </section>
+
+
+      <section>
+        <h2><code>id</code></h2>
+
+        <p><code>id</code> is a global attribute. It can be used with any tag.</p>
+
+        <p>Values <strong>must</strong> be unique.</p>
+      </section>
+
+
+      <section>
+        <h2>Using <code>id</code></h2>
+
+        <p>Using <code>id</code> with a tag gives our link a target.</p>
+
+        <p><code>&lt;section id="cats"&gt;&lt;/section&gt;</code></p>
+
+        <p>The value should:</p>
+
+        <ul>
+          <li><strong>not</strong> begin with a hashtag</li>
+          <li>be identical to the value set in the link</li>
+          <li>be unique (do not use the same ID twice)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Examples</h2>
+
+        <p>To see more examples of intra-page and external links, view the <code><a href="https://github.com/um-cvj-341-spring-2015/link-example">link-example</a> repo.</p>
+      </section>
+
+    </main>
+  </body>
+</html>

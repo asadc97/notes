@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Fixed positioning</title>
+    <link href="../../css/base.css"  rel="stylesheet"/>
+    <style>
+      #red-box,
+      #green-box,
+      #blue-box {
+        /* Because we have no content, we're defining the width,
+           height of our box. */
+        width: 100px;
+        height: 100px;
+      }
+
+      #red-box {
+        background: rgb(248,0,0);
+      }
+
+      #green-box {
+        background: rgb(0,248,0);
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        /* Why bottom and right?
+
+           We know our grid begins in the top, left [0,0], but the
+           width of our viewport can vary based on device. We
+           essentially 'flip' the grid horizontally and vertically,
+           and work upside-down from the bottom right. */
+      }
+
+      #blue-box {
+        background: rgb(0,0,248);
+      }
+
+      /* The following declaration is used to override the above
+         declaration to show how the red and green boxes would look
+         normally. */
+
+      #red-box.static,
+      #green-box.static,
+      #blue-box.static {
+        position: static;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Fixed positioning</h1>
+
+
+    <h2>Not Positioned</h2>
+
+    <div id="red-box" class="static"></div>
+
+    <div id="green-box" class="static"></div>
+
+    <div id="blue-box" class="static"></div>
+
+
+    <h2>Positioned</h2>
+
+    <div id="red-box"></div>
+
+    <div id="green-box"></div>
+
+    <div id="blue-box"></div>
+
+    <p>We can position an element in relation to our viewport (our browser window).</p>
+
+    <p>To move the element, we need to specify a horizontal (x-axis) property (left, right) and a vertical (y-axis) property (top, bottom).</p>
+
+    <p>In this example, <code>#red-box</code> and <code>#blue-box</code> are displayed in their normal flow, while <code>#green-box</code> is moved outside of its normal flow and positioned in the bottom, right corner.</p>
+  </body>
+</html>

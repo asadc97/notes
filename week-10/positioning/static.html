@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Static positioning</title>
+    <link href="../../css/base.css"  rel="stylesheet"/>
+    <style>
+      #red-box {
+        background: rgb(248,0,0);
+        /* Because we have no content, we're defining the width,
+           height of our box. */
+        width: 100px;
+        height: 100px;
+        /* position: static; */
+        /* By default, an element is static. This is to show the
+           property exists. */
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Static positioning</h1>
+
+    <div id="red-box"></div>
+
+    <p>Static is the default value for every element.</p>
+
+    <p>The red box above does not have any <code>position</code> value applied. It is static.</p>
+
+    <p>We do not have to specify <code>position: static;</code><sup>*</sup> in our style sheet, but the value does exist.</p>
+
+    <p><small><sup>*</sup> although it may be necessary when overwriting a CSS declaration in print, mobile style sheets.</small></p>
+
+  </body>
+</html>

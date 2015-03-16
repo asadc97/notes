@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Units of Measurement</title>
+    <link href="../css/base.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <h1>CSS Units of Measurement</h1>
+    </header>
+
+    <main>
+
+      <section>
+        <h2>Choices, choices...</h2>
+
+        <p>What units of measurement do we use when specifying box model, width, height, etc. properties? We utilize screen units, including:</p>
+
+        <ul>
+          <li>pixels (<code>px</code>)</li>
+          <li>percentage (<code>%</code>)</li>
+          <li>ems (<code>em</code>)</li>
+          <li>rems (<code>rem</code>)</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Reminder: The Web is Not Print</h2>
+
+        <p>When you design for print, you use print units:</p>
+
+        <ul>
+          <li>points</li>
+          <li>picas</li>
+          <li>inches</li>
+          <li>centimeters</li>
+          <li>millimeters</li>
+        </ul>
+
+        <p><strong>DO NOT use print units when designing for digital media. Use screen units.</strong></p>
+
+        <p><small>One exception, which we'll get to: Print style sheets.</small></p>
+
+      </section>
+
+
+      <section>
+        <h2>Pixels</h2>
+
+        <h3>Pros</h3>
+
+        <ul>
+          <li>allows for very precise control of design</li>
+          <li>what you see is what you get (WYSIWYG)</li>
+        </ul>
+
+        <h3>Cons</h3>
+
+        <ul>
+          <li>poor choice for fluid, responsive design</li>
+          <li>not ideal for re-sizing text, designs</li>
+        </ul>
+
+        <h3>Syntax</h3>
+
+        <p><code>font-size: 30px;</code></p>
+      </section>
+
+
+      <section>
+        <h2>Relative Units</h2>
+
+        <p>Percentage, ems and rems are <em>relative</em> units.</p>
+
+        <p>This means their values are initially based on a very high-level measurement (usually in pixels) set at the browser, <code>html</code> or <code>body</code> level.</p>
+      </section>
+
+
+      <section>
+        <h2>Percentage</h2>
+
+        <h3>Pros</h3>
+
+        <ul>
+          <li>HTML defaults are calulated expressed in percentage</li>
+          <li>great for fluid, responsive design</li>
+        </ul>
+
+        <h3>Cons</h3>
+
+        <ul>
+          <li>requires calculation based on parent font size</li>
+          <li>very precise caluclations can disrupt layout</li>
+        </ul>
+
+        <h3>Syntax</h3>
+
+        <p><code>width: 90%;</code></p>
+      </section>
+
+
+      <section>
+        <h2>Ems</h2>
+
+        <h3>Pros</h3>
+
+        <ul>
+          <li>great for fluid, responsive design</li>
+          <li>once a base font is set, everything can be relative (to the parent)</li>
+        </ul>
+
+        <h3>Cons</h3>
+
+        <ul>
+          <li>requires calculation based on parent font size</li>
+          <li>very precise caluclations can disrupt layout</li>
+          <li>inherits a parent's property</li>
+        </ul>
+
+        <h3>Syntax</h3>
+
+        <p><code>margin: 2em;</code></p>
+      </section>
+
+
+      <section>
+        <h2>Root Ems</h2>
+
+        <h3>Pros</h3>
+
+        <ul>
+          <li>based on the <code>html</code> element's font size</li>
+          <li>a little more predictable than <em>percentage</em> or <em>ems</em></li>
+          <li>great for fluid, responsive design</li>
+        </ul>
+
+        <h3>Cons</h3>
+
+        <ul>
+          <li>requires calculation</li>
+          <li>can still result in precice, layout-disrupting calculations</li>
+          <li>older browsers (IE 8 or less, Opera Mini) lack support</li>
+        </ul>
+
+        <h3>Syntax</h3>
+
+        <p><code>font-size: 1.25rem;</code></p>
+      </section>
+
+
+      <footer>
+        <p><a href="css-math.html">Next: CSS Math</a></p>
+      </footer>
+
+    </main>
+  </body>
+</html>

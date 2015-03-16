@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Floats</title>
+    <link href="../css/base.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Floats</h1>
+    </header>
+
+    <main>
+
+      <section>
+        <h2>Floating Elements</h2>
+
+        <p>The <code>float</code> property allows us to wrap text around images and/or other elements.</p>
+
+        <p>The property accepts three values:</p>
+
+        <ul>
+          <li>left</li>
+          <li>right</li>
+          <li>none</li>
+        </ul>
+
+        <p>Whenever <code>float</code> is used the element's <code>display</code> value becomes <code>block</code>.</p>
+      </section>
+
+
+      <section>
+        <h2>Clearing Floats</h2>
+
+        <p>Remember how we talked about CSS 2.0 being weird and buggy?</p>
+
+        <p>Clearing floats is a pretty good example of how web developers had to find hacks to get their code right.</p>
+
+        <p>There are a few solutions, all of which may work in different situations.</p>
+
+        <p>Try what works. If it does, stick with it.</p>
+      </section>
+
+
+      <section>
+        <h2><code>clear</code> property</h2>
+
+        <p>Sometimes we need content within the normal flow to appear <em>after</em> a floated element, as if the content were starting on a new line.</p>
+
+        <p>To end a float and re-establish the normal flow, we use the <code>clear</code> property.</p>
+
+        <p>If we're trying to move past:</p>
+
+        <ul>
+          <li>left-floated elements, use <code>clear: left;</code></li>
+          <li>right-floated elements, use <code>clear: right;</code></li>
+          <li>left- and/or right-floated elements, use <code>clear: both;</code></li>
+        </ul>
+
+        <p>The <code>clear</code> property also takes the value <code>none</code>.</p>
+      </section>
+
+
+      <section>
+        <h2><code>:after</code> pseudoclass</h2>
+
+        <p>If you want an element to contain all elements inside of it, use the <code>clear</code> property on an element which uses the <code>:after</code> pseudoclass.</p>
+
+        <p>For example:</p>
+
+        <p><pre>section:after {
+  content: "";
+  display: block;
+  clear: both;
+}</pre></p>
+
+      </section>
+
+
+      <section>
+        <h2><code>.clearfix</code> class</h2>
+
+        <p>Another way of enclosing a floated element within its container:</p>
+
+        <p><pre>.clearfix {
+  overflow: auto;
+  zoom: 1;
+}</pre></p>
+
+        <p>Then add <code>class="clearfix"</code> to the containing element in HTML.</p>
+
+        <p>This is a pretty standard "hack" which still works in older browsers. It's not the nicest solution, but sometimes you go with what works.</p>
+      </section>
+
+      <footer>
+        <p><a href="positioning.html">Next: Positioning</a></p>
+      </footer>
+    </main>
+  </body>
+</html>

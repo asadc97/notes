@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Absolute positioning</title>
+    <link href="../../css/base.css"  rel="stylesheet"/>
+    <style>
+      .container {
+        border: 1px solid #333;
+        /* So we can visualize where our boxes are in relation
+           to the parent element, in this case .container */
+        position: relative;
+        /* The above rule is what keeps our #green-box inside
+           the #container element.
+
+           What happens if you remove 'position: relative;' What
+           happens to the green box?
+        */
+      }
+
+      #red-box,
+      #green-box,
+      #blue-box {
+        /* Because we have no content, we're defining the width,
+           height of our box. */
+        width: 100px;
+        height: 100px;
+      }
+
+      #red-box {
+        background: rgb(248,0,0);
+      }
+
+      #green-box {
+        background: rgb(0,248,0);
+        position: absolute;
+        top: 50px;
+        right: 0;
+      }
+
+      #blue-box {
+        background: rgb(0,0,248);
+      }
+
+      /* The following declaration is used to override the above
+         declaration to show how the red and green boxes would look
+         normally. */
+
+      #red-box.static,
+      #green-box.static,
+      #blue-box.static {
+        position: static;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Absolute positioning</h1>
+
+
+    <h2>Not Positioned</h2>
+
+    <div class="container">
+      <div id="red-box" class="static"></div>
+
+      <div id="green-box" class="static"></div>
+
+      <div id="blue-box" class="static"></div>
+    </div>
+
+
+    <h2>Positioned</h2>
+
+    <div class="container">
+      <div id="red-box"></div>
+
+      <div id="green-box"></div>
+
+      <div id="blue-box"></div>
+    </div>
+
+    <p>An element with its position set as absolute acts like a fixed element, but relative to the <em>nearest positioned ancestor</em>.</p>
+
+    <p>If the ancestor is static, the element will be positioned in relation to the document body.</p>
+
+    <p>To make this work:</p>
+
+    <ul>
+      <li>the parent element must have its position designated as relative</li>
+      <li>we need to specify a horizontal (x-axis) property (left, right) and a vertical (y-axis) property (top, bottom) of the element to be moved.</li>
+    </ul>
+  </body>
+</html>

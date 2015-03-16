@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Math</title>
+    <link href="../css/base.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <h1>CSS Math</h1>
+    </header>
+
+    <main>
+
+      <section>
+        <h2>Converting Between Units</h2>
+
+        <p>Pixels are fixed units, which are great to work with if we want 'pixel-perfect' designs. They are not helpful when we want to create flexible, responsive designs.</p>
+
+        <p>How do we convert our designs from pixels to relative measurements? With a little bit of math.</p>
+
+        <p>By default, (most) browsers have a default font size of 16 pixels. What if a user changes these settings? It is okay &mdash; our font size is still proportional to the new, user-defined font size.</p>
+      </section>
+
+
+      <section>
+        <h2><code>px</code> to <code>em</code></h2>
+
+        <h3>Formula</h3>
+
+        <p><var>size in pixels</var> / <var>parent size in pixels</var> = ems</p>
+
+        <h3>Examples</h3>
+
+        <p><code>12px / 16px = .75em</code></p>
+
+        <p><code>36px / 16px = 2.25em</code></p>
+
+        <p><code>48px / 16px = 3em</code></p>
+
+        <p>When using ems, the parent size is based on the immediate parent, not <code>html</code>.</p>
+
+        <p>If a you are calculating the font size for an element whose parent also has a font size, you take into acount the parent's font size in your calculation.</p>
+
+        <p><a href="css-math/ems-in-action.html">View example</a></p>
+      </section>
+
+
+      <section>
+        <h2><code>px</code> to <code>percentage</code></h2>
+
+        <h3>Formula</h3>
+
+        <p>(<var>size in pixels</var> / <var>parent size in pixels</var>) * <var>100</var> = percentage</p>
+
+        <h3>Examples</h3>
+
+        <p><code>(12px / 16px) * 100 = 75%</code></p>
+
+        <p><code>(36px / 16px) * 100 = 225%</code></p>
+
+        <p><code>(48px / 16px) * 100 = 300%</code></p>
+
+        <p>When using percentage, the parent size is based on the immediate parent, not <code>html</code>.</p>
+
+        <p>If a you are calculating the font size for an element whose parent also has a font size, you take into acount the parent's font size in your calculation.</p>
+
+        <p><a href="css-math/percentage-in-action.html">View example</a></p>
+      </section>
+
+
+      <section>
+        <h2><code>px</code> to <code>rem</code></h2>
+
+        <h3>Formula</h3>
+
+        <p><var>size in pixels</var> / <var>html size in pixels</var> = root ems</p>
+
+        <h3>Examples</h3>
+
+        <p><code>12px / 16px = .75rem</code></p>
+
+        <p><code>36px / 16px = 2.25rem</code></p>
+
+        <p><code>48px / 16px = 3rem</code></p>
+
+        <p>When using root ems, the parent size is based on the <code>font-size</code> property set on <code>html</code>.</p>
+
+        <p><a href="css-math/root-ems-in-action.html">View example</a></p>
+      </section>
+
+
+      <section>
+        <h2>Tips</h2>
+
+        <p>Since you're just starting out, it is okay to use pixels. You can always convert your units in a later iteration of your web site design.</p>
+
+        <p>Become proficient in using fixed design practices, then try to implement fluid design practices.</p>
+
+        <p>When making conversions, be sure you leave a comment in your CSS as a reminder of your calculation. For instance:</p>
+
+        <p><code>font-size: 1.875em; /* 30px / 16px */</code></p>
+      </section>
+
+      <footer>
+        <p><a href="simple-layouts.html">Next: Simple Layouts</a></p>
+      </footer>
+
+    </main>
+  </body>
+</html>

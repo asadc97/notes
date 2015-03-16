@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dimensions &amp; Overflow</title>
+    <link href="../css/base.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Dimensions &amp; Overflow</h1>
+    </header>
+
+    <main>
+
+      <section>
+        <h2>Sizing Boxes</h2>
+
+        <p>As we have seen with the block elements and the box model, content will take up whatever room we give it... unless we specify otherwise.</p>
+
+        <p>When we want to create layouts, we can apply constraints:</p>
+
+        <ul>
+          <li>width</li>
+          <li>height</li>
+          <li>overflow</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Dimensions</h2>
+
+        <p><em>Width</em> is often helpful for layout and design since we are often limited (horizontally) by screen size.</p>
+
+        <p>We can specify <em>height</em> but it really is not necessary since scrolling is an accepted practice when using a web interface.</p>
+
+        <ul>
+          <li><code>width</code></li>
+          <li><code>max-width</code></li>
+          <li><code>min-width</code></li>
+          <li><code>height</code></li>
+          <li><code>max-height</code></li>
+          <li><code>min-height</code></li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Overflow</h2>
+
+        <p>What happens if we have content which is greater in size than the box we've provided for it?</p>
+
+        <p>We can specify <em>overflow</em> properties, which handle how that content is displayed within its parent element.</p>
+
+        <dl>
+          <dt><code>visible</code></dt>
+          <dd>content breaks the box's dimensions</dd>
+
+          <dt><code>hidden</code></dt>
+          <dd>hides content which would normally extend beyond the box's dimensions</dd>
+
+          <dt><code>scroll</code></dt>
+          <dd>adds vertical and horizontal scroll bars</dd>
+
+          <dt><code>auto</code></dt>
+          <dd>adds vertical and/or horizontal scroll bars <em>if necessary</em></dd>
+        </dl>
+      </section>
+
+      <footer>
+        <p><a href="css-units.html">Next: CSS Units</a></p>
+      </footer>
+
+    </main>
+  </body>
+</html>

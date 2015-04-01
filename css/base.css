@@ -34,6 +34,35 @@ h1, h2 {
   font-family: 'Roboto Slab', sans-serif;
 }
 
+h2 span {
+  display: block;
+}
+
+#jpg img {
+  border: 1px solid #222;
+}
+
+#svg img {
+  margin-right: 1em;
+}
+
+#png img:last-child {
+  margin-right: 0;
+}
+
+#svg img.sm {
+  width: 50px;
+}
+
+#svg img.md {
+  width: 100px;
+}
+
+#svg img.lg {
+  width: 200px;
+}
+
+
 
 @media print {
   html {
